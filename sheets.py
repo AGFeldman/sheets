@@ -85,7 +85,7 @@ generate_token_parser = subparsers.add_parser(
         help='Generate a token for accessing Google Drive files via a Google APIs project')
 generate_token_parser.set_defaults(func=_generate_token)
 generate_token_parser.add_argument('credentials_path', type=str, help='File path to credentials.json, which you can download after creating a project in https://console.developers.google.com/apis/. Enable the Google Sheets API in that project, then create credentials that use OAuth client ID, and download the credentials.')
-generate_token_parser.add_argument('token_path', type=str, help='File path to use for writing token.json')
+generate_token_parser.add_argument('token_path', type=str, help='File path to use for writing token.json. Depending on your application, you may need to chmod this token.json file afterwards.')
 
 create_sheet_parser = subparsers.add_parser('create_sheet', help='Create a sheet')
 create_sheet_parser.set_defaults(func=_create_sheet)
